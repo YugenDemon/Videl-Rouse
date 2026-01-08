@@ -1,0 +1,897 @@
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.searcher{
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* sombra solo abajo */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8%;
+    position: relative;
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0,30 ),
+        0 2px 6px rgba(0, 0, 0, 0.30);
+}
+
+
+.isotipo {
+    margin: 5px;
+    padding: 2px;
+    z-index: 99;
+    position: fixed;
+    top: 70px;
+    left: 5px;
+    border-radius: 50%;
+    width: 6%;
+    aspect-ratio: 1 / 1; /* mantiene forma circular responsive */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden; /* 🔑 evita desbordamientos */
+}
+.isotipo .musica {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.isotipo .musica .firma {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+.isotipo .musica .disco {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(6px);
+    opacity: 0.25;
+
+    animation: girar 4s linear infinite;
+    animation-play-state: paused; 
+}
+.isotipo:hover .musica .firma {
+    opacity: 0;
+}
+.isotipo:hover .musica .disco {
+    animation-play-state: running; 
+    opacity: 0.4;
+}
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.socialMedias {
+    font-size: 15px;
+    font-family: quicksand, sans-serif;
+    position: fixed;
+    right: -80px;
+    transform: translateX(-50%);
+    z-index: 99;
+    height: 7%;
+}
+/* RESET */
+.socialMedias ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* CONTENEDOR */
+.socialMedias .main-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+/* LOGO (TRIGGER) */
+.socialMedias .trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #f5f5f500;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.socialMedias .trigger:hover {
+    transform: scale(1.1);
+}
+.socialMedias .trigger img {
+    padding-left: 20px;
+    border-left: solid 2px black;
+    width: 110px;
+    height: auto;
+}
+
+/* SUBMENÚ */
+.socialMedias .submenu {
+    padding-top: 10px;
+    padding-right: 20px;
+    width: 120px;
+    height: 40px;
+    text-align: right;
+    position: absolute;
+    top: 80%;
+    right: -90px;
+    padding-right: 10px;
+    transform: translate(-50%, -10px);
+    opacity: 0;
+    pointer-events: none;
+    margin-top: 6px;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+/* Mostrar menú SOLO cuando el logo está en hover */
+.socialMedias .trigger:hover + .submenu,
+.socialMedias .submenu:hover {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    pointer-events: auto;
+}
+/* ITEMS */
+.socialMedias .submenu li a {
+    height: 20px;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 60px;
+    background-color: #f5f5f5;
+    color: black;
+    text-decoration: none;
+    transform: translateX(0);
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.socialMedias .submenu li a:hover {
+    background-color: #ddd;
+    transform: translateX(-15px);
+}
+
+.searcher .busqueda {
+    font-family: Quicksand, sans-serif;
+    padding-top: 17px;
+    z-index: 99;
+    position: fixed;
+    height: 6%;
+    left: 5%;
+    width:0;
+}
+.searcher .busqueda input {
+    border: none;
+    padding-left: 10px;
+    height: 30px;
+    border-radius: 60px;
+    width: 105px;
+    background-color: rgba(255, 255, 255, 0.606);
+    color: black;
+    transition:
+        width 0.6s cubic-bezier(.4,0,.2,1),
+        background-color 0.4s ease,
+        color 0.4s ease,
+        transform 0.3s ease;
+}
+.searcher .busqueda input:hover {
+    width: 300px;
+    transform: translateX(-5px);
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.searcher .boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Main {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+.mainWallpaper{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.mainWallpaper img{
+    width: 100%;
+}
+.profileCenter {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(200px, 3fr);
+}
+
+.profileCenter .photo {
+    background-color: rgba(255, 255, 255, 0);
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 800px){
+     .mainWallpaper img{
+        width: 100%;
+        height: auto;
+    }
+        .photo {
+            padding-top: 10%;
+        }
+}
+
+.presentationText {
+    padding-top: 5%;
+    text-align: center;
+    background-color: rb(125, 137, 168);
+    width: 100%;
+    font-size: 16px;
+    letter-spacing: 4px;
+    font-family: Quicksand, sans-serif;
+}
+.atajos {
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    flex-wrap: wrap;
+}
+.atajos .option1 {
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    cursor: pointer;
+    width: auto;
+    padding: 0 20px;
+    border-radius: 60px 60px;
+    height: 40px;
+}
+.atajos .option { 
+  cursor: pointer;
+  font-family: Quicksand, sans-serif; 
+  color: black;
+  text-align: center;
+  margin: 0 15px; 
+  width: 20%; 
+  height: 40px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  user-select: none;
+  font-size: 20px; 
+  border-radius: 60px; 
+
+  background-color: rgba(241, 195, 242, 0.326); 
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15); 
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.15s ease,
+    color 0.2s ease;
+}
+.atajos .option1  {
+   cursor: pointer;
+}
+.atajos input  {
+  display: none;
+}
+.atajos .option:hover {
+    background-color: black;
+    color: white;
+    transform: translateY(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+.atajos .option:active {
+    animation: clickConfirm 0.6s ease forwards;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+#btn1:checked ~ label[for="btn1"],
+#btn2:checked ~ label[for="btn2"],
+#btn3:checked ~ label[for="btn3"] {
+  background-color: rgba(0, 0, 0, 0.342);
+  color: white;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.353);
+}
+
+#btn1:checked ~ .panel.tabla,
+#btn2:checked ~ .panel.galeria,
+#btn3:checked ~ .panel.terminos {
+  background-color: rgb(49, 33, 53);
+  transform: translateY(0);
+}
+@keyframes clickFlash {
+  0% {
+    opacity: 1;
+    transform: scale(0.97);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 800px){
+    .atajos {
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 25%);
+            place-content: center;
+            place-items: center;
+            height: auto;
+            top: 70%;
+            gap: 5%;
+        }
+        .atajos .option {
+            text-align: center;
+            margin-top: 10%;
+            width: 100%;
+            height: 100%;
+            font-size: 80%;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-family: Quicksand, sans-serif;
+        }
+}
+.profilePicture {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-bottom:  1px solid black;
+}
+.profilePicture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 60%;
+    display: block;
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0,30 ),
+        0 2px 6px rgba(0, 0, 0, 0.30);
+
+}
+@media (max-width: 800px){
+    .profilePicture {
+        width: 100%;
+        height: 100%;
+        
+    }
+    .presentationText {
+    padding-top: 5%;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: Quicksand, sans-serif;
+}
+    .profilePicture img {
+        width: 80px;
+        height: 80px;
+    }
+}   
+
+
+/*Contenedores tiene los box invisibles, 
+de necesitarlo puedo aniadir mas boxes, osea
+cotenedores*/
+.contenedores {
+    font-family: Quicksand, sans-serif; 
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50px;
+}
+/*Estos son los contenedores invisibles*/
+.box {
+    inset: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    border-radius: 16px;
+    transform: translateY(32px);
+    pointer-events: auto;
+    box-shadow:
+        0 2px 4px rgba(0,0,0,0.12),
+        0 6px 12px rgba(0,0,0,0.08);
+
+    transition:
+        opacity 0.35s cubic-bezier(0.4, 0.0, 0.2, 1),
+        transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1),
+        box-shadow 0.35s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+/*Cotenedor n1, Tabla de precios*/
+.contenedores .box-a {
+  background-color: rgba(0, 0, 0, 0.473);
+    gap: 10px;
+    width: 100%;
+    height: 480px;
+    max-height: auto;
+}
+.tablaPrecios {
+    width: 100%;
+    height: 100%;
+}
+
+/*Optio1 es el boton para volver desaparecer el contenedor box-a*/
+
+.box .option1 {
+    z-index: 99;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 60px;
+    color: rgb(12, 12, 12);
+}
+.box .option1:hover {
+    background-color: rgba(0, 0, 0, 0.575);
+    color: white;
+    transform: scaleY(-5px);
+
+}
+/*El contenedor se divide en dos partes,
+1. EL personaje y sus versiones
+2. Unos botones de filtro para dejarle ver al usuario algo especifico
+*/
+/*Esta primera parte (Es decir, .personaje) Tiene 3 contenedores verticales.
+1. Versiones/
+2. un contenedor de imagenes.
+3. Un contenedor con un boton para ir a terminos y condiciones directamente*/
+
+.box .personaje {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+/*Las versiones son SKetch, lineArt y Full*, son botones que ayudan a cambiar la version de las imagenes*/
+.box .personaje .versiones {
+    gap: 10%;
+    width: 100%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box .personaje .versiones label {
+    color: black;
+    font-size: 15px;
+    padding: 2px;
+    cursor: pointer;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.527);
+    border-radius: 60px;
+    text-align: center;
+    width: 20%;
+    transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.15s ease,
+    color 0.2s ease;
+}
+.box .personaje .versiones label:hover {
+    background-color: black;
+    color: white;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+.box .personaje .versiones label:active {
+    animation: clickConfirm 0.6s ease forwards;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+/*Este checked solo sirve cuando se presiona click, 
+el color escogido se mantenga*/
+#boceto:checked ~ label[for="boceto"],
+#lineArt:checked ~ label[for="lineArt"],
+#fullHD:checked ~ label[for="fullHD"] {
+  background-color: rgba(0, 0, 0, 0.301);
+  color: white;
+  box-shadow: 0 6px 16px rgba(112, 112, 112, 0.353);
+}
+/*Contenedor de CuerpoVersiones, termyCond y priceDetails*/
+.layout {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+/*Aqui cuerpo versiones tambien es invisible*/
+.cuerpoPrecios {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 94%;
+}
+.box .personaje .cuerpoVersiones {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+}
+
+.box .personaje .cuerpoVersiones .imagenes {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    width: 90%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    /*transform: translateX(-40px);*/
+    transition:
+        opacity 0.45s cubic-bezier(0.4, 0.0, 0.2, 1),
+        transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+.grupo {
+    margin: 20px;
+    pointer-events: none;
+    overflow: hidden;
+    display: none;
+    gap: 5%;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+     display: none;
+     opacity: 0;
+     transform: translateX(-20px);
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.6s ease;
+    
+}
+
+.grupo.activo {
+    position: relative;
+  animation: slideFadeIn 0.3s ease forwards;
+    pointer-events: auto;
+  display: flex;
+}
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.grupo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    transition:
+    transform 0.35s cubic-bezier(0.4, 0.0, 0.2, 1),
+    box-shadow 0.35s ease;
+}
+.grupo img:hover {
+     transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+}
+@media (hover: hover) {
+  .grupo img:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.grupo.activo img:nth-child(1) { animation-delay: 0.1s; }
+.grupo.activo img:nth-child(2) { animation-delay: 0.25s; }
+.grupo.activo img:nth-child(3) { animation-delay: 0.4s; }
+.grupo.activo img:nth-child(4) { animation-delay: 0.55s; }
+
+
+.box .personaje .cuerpoVersiones .precios {
+  background-color: white;
+    width: 18%;
+    height: auto;
+    box-shadow:
+        0 2px 4px rgba(0,0,0,0.12),
+        0 6px 12px rgba(0,0,0,0.08);
+
+    transition:
+        opacity 0.35s cubic-bezier(0.4, 0.0, 0.2, 1),
+        transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1),
+        box-shadow 0.35s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.precio.activo {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+.precio {
+    width: 100%;
+    height: 100%;
+  display: none;
+}
+.precio.activo {
+  display: block;
+  font-weight: bold;
+}
+.pricesDetails button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 1px solid #444;
+  color: black;
+  margin-right: 5px;
+}
+.pricesDetails button.activo {
+  background: #24163b;
+}
+.pricesDetails .filtro {
+    width: 100%;
+    height: auto;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 12px;
+  border: none;
+  background: #ddd;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.pricesDetails .filtro.activo {
+  background: black;
+  color: white;
+}
+.pricesDetails button.activo {
+  background: #000000;
+}
+.box .personaje .termycond2 {
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: black;
+    width: 40%;
+    color: white;
+    height: 7%;
+}
+.box .personaje .termycond2 p{
+    width: 100%;
+    padding-left: 10px;
+}
+.botonTermsyCond {
+    margin-left: 10px;
+    transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.15s ease,
+    color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 16px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 10px;
+}
+.botonTermsyCond:hover {
+    background-color: rgb(167, 58, 58);
+    color: white;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    
+}
+/*Esto hace que lo invisible se vuelva visible*/
+/*Aqui empieza la box-b. Seccion Galeria.*/
+.contenedores .box-b {
+    opacity: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* .box .personaje .cuerpoVersiones .fullBody-boceto,
+.box .personaje .cuerpoVersiones .fullBody-lineArt,
+.box .personaje .cuerpoVersiones .fullBody-FullHd {
+      opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    box-shadow:
+        0 6px 10px rgba(0,0,0,0.16),
+        0 12px 24px rgba(0,0,0,0.12);
+    transition-delay: 0.05s;
+} */
+.box .personajes .versiones:checked {
+    background-color: rgb(49, 33, 53);
+    transform: translateY(0);
+}
+.box .pricesDetails {
+    width: 60%;
+    height: 100%;
+
+}
+#btn1:checked ~ .contenedores .box-a,
+#btn2:checked ~ .contenedores .box-b,
+#btn3:checked ~ .contenedores .box-c {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  box-shadow:
+    0 6px 10px rgba(0,0,0,0.16),
+    0 12px 24px rgba(0,0,0,0.12);
+  transition-delay: 0.05s;
+}
+
+
+
+
+.secondWallpaper{
+    background-color: black;
+    height: px;
+    width: 100%;
+}
+.thirdWallpaper{
+    background-color: black;
+    width: 100%;
+}
+
+
+/* ================================
+   RESPONSIVE – SOLO MÓVIL
+   NO MODIFICA ESCRITORIO
+================================ */
+@media (max-width: 800px){
+     .box-a{
+        width: 100%;
+        height:300px;
+    }
+        .photo {
+            padding-top: 10%;
+            background-color: rgb(15, 48, 106);
+        }
+}
+/* ===== MODAL OVERLAY ===== */
+.modalImagen {
+    width: 100%;
+    height: 700px;
+  position: fixed;
+  left: 50px;
+  top: 50px;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s ease;
+  z-index: 9999;
+}
+
+.modalImagen.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== IMAGEN ===== */
+.modalImg {
+  max-width: 100%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0,0,0,.6);
+  transform: scale(0.92);
+  opacity: 0;
+  transition:
+    transform .45s ease,
+    opacity .45s ease;
+}
+
+/* Cuando el modal está activo */
+.modalImagen.activo .modalImg {
+  transform: scale(1);
+  opacity: 1;
+}
+/* ===== BOTONES ===== */
+.modalImagen .nav {
+  position: absolute;
+  background: rgba(255,255,255,.2);
+  border: none;
+  color: white;
+  font-size: 30px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background .3s;
+}
+
+.modalImagen .prev { left: 5%; }
+.modalImagen .next { right: 5%; }
+
+.modalImagen .cerrar {
+    transition:
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.2s ease;
+    z-index: 99999;
+    width: 50px;
+    height: 50px;
+    border-radius: 60px;
+    background-color: rgb(143, 0, 0);
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cerrar:active {
+  transform: translateY(2px) scale(0.96);
+  background-color: rgba(0,0,0,0.1);
+}
+.cerrar:hover {
+    background-color: rgb(206, 177, 177);
+    color: rgb(0, 0, 0);
+}

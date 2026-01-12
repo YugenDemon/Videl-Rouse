@@ -14,8 +14,8 @@ body {
     box-shadow: 
         0 4px 12px rgba(0, 0, 0,30 ),
         0 2px 6px rgba(0, 0, 0, 0.30);
+    
 }
-
 
 .isotipo {
     margin: 5px;
@@ -173,6 +173,7 @@ body {
     height: 6%;
     left: 5%;
     width:0;
+   
 }
 .searcher .busqueda input {
     border: none;
@@ -199,6 +200,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 500px){
+    .searcher {
+     background-color: rgb(140, 140, 207);  
+     height: 40px; 
+    }
+    .searcher .busqueda  {
+        width: 100%;
+        display: none;
+    }
 }
 .Main {
     height: auto;
@@ -234,15 +246,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-@media (max-width: 800px){
-     .mainWallpaper img{
-        width: 100%;
-        height: auto;
-    }
-        .photo {
-            padding-top: 10%;
-        }
-}
+
 
 .presentationText {
     padding-top: 5%;

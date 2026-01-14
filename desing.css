@@ -202,16 +202,7 @@ body {
     align-items: center;
 }
 
-@media (max-width: 500px){
-    .searcher {
-     background-color: rgb(140, 140, 207);  
-     height: 40px; 
-    }
-    .searcher .busqueda  {
-        width: 100%;
-        display: none;
-    }
-}
+
 .Main {
     height: auto;
     width: 100%;
@@ -256,6 +247,26 @@ body {
     font-size: 16px;
     letter-spacing: 4px;
     font-family: Quicksand, sans-serif;
+}
+    .profilePicture {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-bottom:  1px solid black;
+}
+    .profilePicture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 60%;
+    display: block;
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0,30 ),
+        0 2px 6px rgba(0, 0, 0, 0.30);
+
 }
 .atajos {
     position: absolute;
@@ -342,69 +353,6 @@ body {
     transform: scale(1);
   }
 }
-
-@media (max-width: 800px){
-    .atajos {
-            padding: 0;
-            margin: 0;
-            display: grid;
-            grid-template-columns: repeat(3, 25%);
-            place-content: center;
-            place-items: center;
-            height: auto;
-            top: 70%;
-            gap: 5%;
-        }
-        .atajos .option {
-            text-align: center;
-            margin-top: 10%;
-            width: 100%;
-            height: 100%;
-            font-size: 80%;
-            margin-left: 10px;
-            margin-right: 10px;
-            font-family: Quicksand, sans-serif;
-        }
-}
-.profilePicture {
-    padding-top: 10%;
-    padding-bottom: 10%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    border-bottom:  1px solid black;
-}
-.profilePicture img {
-    width: 100px;
-    height: 100px;
-    border-radius: 60%;
-    display: block;
-    box-shadow: 
-        0 4px 12px rgba(0, 0, 0,30 ),
-        0 2px 6px rgba(0, 0, 0, 0.30);
-
-}
-@media (max-width: 800px){
-    .profilePicture {
-        width: 100%;
-        height: 100%;
-        
-    }
-    .presentationText {
-    padding-top: 5%;
-    text-align: center;
-    width: 100%;
-    font-size: 15px;
-    letter-spacing: 1px;
-    font-family: Quicksand, sans-serif;
-}
-    .profilePicture img {
-        width: 80px;
-        height: 80px;
-    }
-}   
 
 
 /*Contenedores tiene los box invisibles, 
@@ -566,7 +514,6 @@ el color escogido se mantenga*/
     justify-content: center;
     align-items: center;
     pointer-events: none;
-    /*transform: translateX(-40px);*/
     transition:
         opacity 0.45s cubic-bezier(0.4, 0.0, 0.2, 1),
         transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1);
@@ -589,7 +536,6 @@ el color escogido se mantenga*/
     position: absolute;
     inset: 0;
     transition: opacity 0.6s ease;
-    
 }
 
 .grupo.activo {
@@ -805,16 +751,6 @@ el color escogido se mantenga*/
    RESPONSIVE – SOLO MÓVIL
    NO MODIFICA ESCRITORIO
 ================================ */
-@media (max-width: 800px){
-     .box-a{
-        width: 100%;
-        height:300px;
-    }
-        .photo {
-            padding-top: 10%;
-            background-color: rgb(15, 48, 106);
-        }
-}
 /* ===== MODAL OVERLAY ===== */
 .modalImagen {
     width: 100%;
@@ -898,4 +834,102 @@ el color escogido se mantenga*/
 .cerrar:hover {
     background-color: rgb(206, 177, 177);
     color: rgb(0, 0, 0);
+}
+/* 
+Modelado responsive */
+@media (max-width: 800px){
+    .searcher {
+     background-color: rgb(206, 50, 211);  
+     height: 35px; 
+    }
+    .searcher .busqueda  {
+        width: 100%;
+        display: none;
+    }
+    .presentationText {
+    text-align: center;
+    width: 100%;
+    font-size: 100%;
+    letter-spacing: 1px;
+    font-family: Quicksand, sans-serif;
+    }
+    .profilePicture {
+    padding-top: 0%;
+    padding-bottom: 10%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-bottom:  1px solid black;
+}
+    .profilePicture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 60%;
+    display: block;
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0,30 ),
+        0 2px 6px rgba(0, 0, 0, 0.30);
+    }
+    .contenedores .box-a {
+    background-color: rgba(0, 0, 0, 0.473);
+        gap: 10px;
+        width: 100%;
+        height: 300px;
+        max-height: auto;
+    }
+
+    .Cuadro {
+        position: absolute;
+        bottom: -50px;
+        font-size: 10px;
+    }
+    .mainWallpaper{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: auto;
+    }
+    .mainWallpaper img{
+    width: 100%;
+    }
+    .atajos {
+            padding: 0;
+            margin: 0;
+            place-content: center;
+            place-items: center;
+            height: auto;
+            top: 105%;
+            width: 100%;
+            height: 100px;
+    }
+    .atajos .option {
+    font-size: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 20%;
+    padding: 0 5px;
+    border-radius: 60px 60px;
+    height: 40px;
+    }
+    .imagenes {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    width: 90%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition:
+        opacity 0.45s cubic-bezier(0.4, 0.0, 0.2, 1),
+        transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+
+
 }

@@ -618,14 +618,30 @@ el color escogido se mantenga*/
   font-weight: bold;
 }
 .pricesDetails button {
-  padding: 8px 12px;
-  cursor: pointer;
-  border: 1px solid #444;
-  color: black;
-  margin-right: 5px;
+    color: black;
+    font-size: 15px;
+    padding: 2px;
+    cursor: pointer;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.527);
+    border-radius: 60px;
+    text-align: center;
+    width: 20%;
+    transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.15s ease,
+    color 0.2s ease;
 }
-.pricesDetails button.activo {
-  background: #24163b;
+.pricesDetails button:hover {
+    background-color: black;
+    color: white;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+.pricesDetails button:active {
+    animation: clickConfirm 0.6s ease forwards;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
 }
 .pricesDetails .filtro {
     width: 100%;
@@ -861,11 +877,8 @@ Modelado responsive */
     width: 100%;
     height: 100%;
     }
-    .box-a {
-    background-color: rgba(0, 0, 0, 0.473);
-        gap: 10px;
-        width: 100%;
-        height: 300px;
+    .box-a {    
+        height: 400px;
     }
     .Cuadro {
         position: absolute;
@@ -873,46 +886,20 @@ Modelado responsive */
         font-size: 10px;
     }
     .mainWallpaper{
-    position: relative;
     top: 50px;
-    width: 100%;
-    height: auto;
-    }
-    .mainWallpaper img{
-    width: 100%;
     }
     .atajos {
-            padding: 0;
-            margin: 0;
-            place-content: center;
-            place-items: center;
-            height: auto;
             top: 105%;
             width: 100%;
-            height: 100px;
+            height: auto;
     }
     .atajos .option {
     font-size: 80%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    width: 20%;
     padding: 0 5px;
-    border-radius: 60px 60px;
     height: 40px;
     }
     .imagenes {
-    background-color: ed;
-    width: 80%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-    transition:
-        opacity 0.45s cubic-bezier(0.4, 0.0, 0.2, 1),
-        transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1);
+    background-color: rgb(129, 78, 78);
 }
     .box .pricesDetails {
     width: 100%;
@@ -921,9 +908,9 @@ Modelado responsive */
 
 }
 .grupo {
-    padding: 0px;
+    overflow:visible;
+    background-color: blue;
     margin: 0px;
-    width: 400px;
     height: 95%;
 }
 .grupo img {

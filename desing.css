@@ -857,6 +857,7 @@ el color escogido se mantenga*/
 Modelado responsive */
 @media (max-width: 800px){
     .searcher { 
+        display: none;
      height: 35px; 
     }
     .searcher .busqueda  {
@@ -873,16 +874,16 @@ Modelado responsive */
     height: 80px;
 }
     .profilePicture img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     }
     .Cuadro {
         position: absolute;
-        bottom: -50px;
+        bottom: -20px;
         font-size: 10px;
     }
     .mainWallpaper{
-    top: 50px;
+    top: 70px;
     }
     .atajos {
             top: 105%;
@@ -902,7 +903,7 @@ Modelado responsive */
 }
 
     .box .pricesDetails {
-    padding: 4px;
+    padding-top: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -913,7 +914,6 @@ Modelado responsive */
     .pricesDetails button {
         width: 100%;
         font-size: 10px;
-
     }
 
 .grupo {
@@ -954,13 +954,16 @@ Modelado responsive */
     color: beige;
 }
 .box .personaje .termycond2 {
+    justify-content: left;
     height: 4%;
     font-size: 12px;
     margin: 0;
-    padding: 0;
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .precios {
-    background-color: rd;
+    background-color: red;
     width: 300px;
     
 }

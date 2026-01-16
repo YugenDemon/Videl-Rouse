@@ -899,6 +899,7 @@ Modelado responsive */
     height: 40px;
     }
     .imagenes {
+    width: 80%;
     background-color: rgb(129, 78, 78);
 }
     .box .pricesDetails {
@@ -908,6 +909,7 @@ Modelado responsive */
 
 }
 .grupo {
+    width: 25%;
     overflow:visible;
     background-color: blue;
     margin: 0px;

@@ -735,6 +735,8 @@ el color escogido se mantenga*/
     transform: translateY(0);
 }
 .box .pricesDetails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 60%;
     height: 100%;
 }
@@ -904,18 +906,15 @@ Modelado responsive */
 
     .box .pricesDetails {
     padding-top: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: auto;
     background-color: rgb(103, 240, 160);
+    grid-template-columns: repeat(auto-fit, auto);
 }
     .pricesDetails button {
         width: 100%;
         font-size: 10px;
     }
-
 .grupo {
     width: 25%;
     overflow:visible;

@@ -1,4 +1,5 @@
 body {
+    background-color: black;
     position: relative;
     margin: 0;
     padding: 0;
@@ -736,7 +737,7 @@ el color escogido se mantenga*/
 }
 .box .pricesDetails {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(auto, max-content));
     width: 60%;
     height: 100%;
 }
@@ -859,7 +860,7 @@ el color escogido se mantenga*/
 Modelado responsive */
 @media (max-width: 800px){
     .searcher { 
-        display: none;
+    display: none;
      height: 35px; 
     }
     .searcher .busqueda  {
@@ -871,7 +872,6 @@ Modelado responsive */
     letter-spacing: 1px;
     }
     .profilePicture {
-    padding-top: 0%;
     width: 80px;
     height: 80px;
 }
@@ -885,7 +885,7 @@ Modelado responsive */
         font-size: 10px;
     }
     .mainWallpaper{
-    top: 70px;
+    top: 90px;
     }
     .atajos {
             top: 105%;
@@ -909,10 +909,9 @@ Modelado responsive */
     width: 100%;
     height: auto;
     background-color: rgb(103, 240, 160);
-    grid-template-columns: repeat(auto-fit, auto);
+    
 }
     .pricesDetails button {
-        width: 100%;
         font-size: 10px;
     }
 .grupo {

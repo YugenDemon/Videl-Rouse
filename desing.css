@@ -1,5 +1,4 @@
 body {
-    background-color: black;
     position: relative;
     margin: 0;
     padding: 0;
@@ -364,7 +363,7 @@ cotenedores*/
     width: 100%;
     height: 100%;
     position: relative;
-    top: 50px;
+    top: 60px;
 }
 /*Estos son los contenedores invisibles*/
 .box {
@@ -484,7 +483,7 @@ el color escogido se mantenga*/
 /*Contenedor de CuerpoVersiones, termyCond y priceDetails*/
 .layout {
     width: 100%;
-    height: 100%;
+    height: 450px;
     position: relative;
     
 }
@@ -510,7 +509,7 @@ el color escogido se mantenga*/
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
-    width: 90%;
+    width: 70%;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -520,11 +519,10 @@ el color escogido se mantenga*/
         transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 .grupo {
-    margin: 20px;
     pointer-events: none;
     overflow: hidden;
     display: none;
-    gap: 5%;
+    gap: 2%;
     pointer-events: none;
     display: flex;
     justify-content: center;
@@ -901,6 +899,9 @@ Modelado responsive */
         height: 300px;
     }
     .imagenes {
+    background-color: rgb(112, 36, 36);
+    padding: 0px;
+    margin: 0px;
     width: 70%;
 }
 
@@ -918,6 +919,7 @@ Modelado responsive */
     width: 25%;
     overflow:visible;
     margin: 0px;
+    padding: 0px;
     height: 95%;
 }
 .grupo img {
@@ -937,18 +939,18 @@ Modelado responsive */
     display: block;
 }
 .cuerpoVersiones {
-    background-color: rgb(43, 43, 165);
-    height: 400px;
+    width: 100%;
+    background-color: rgb(122, 122, 177);
 }
 .box .option1 {
     font-size: 12px;
     z-index: 99;
-    width: 30px;
+    width: 10px;
     height: 20px;
-    background-color: rgba(3, 1, 1, 0.589);
-    top: -40px;
-    right: 43%;
-    border-radius: 60px 60px;
+    background-color: rgba(199, 0, 0, 0.589);
+    top: 0px;
+    right: -1px;
+    border-radius: 90%;
     color: beige;
 }
 .box .personaje .termycond2 {
@@ -962,7 +964,7 @@ Modelado responsive */
 }
 .precios {
     background-color: red;
-    width: 300px;
+    width: 100%;
     
 }
 .botonTermsyCond {

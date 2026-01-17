@@ -16,7 +16,6 @@ body {
         0 2px 6px rgba(0, 0, 0, 0.30);
     
 }
-
 .isotipo {
     margin: 5px;
     padding: 2px;
@@ -26,12 +25,12 @@ body {
     left: 5px;
     border-radius: 50%;
     width: 6%;
-    aspect-ratio: 1 / 1; /* mantiene forma circular responsive */
+    aspect-ratio: 1 / 1; 
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    overflow: hidden; /* 🔑 evita desbordamientos */
+    overflow: hidden; 
 }
 .isotipo .musica {
     position: relative;
@@ -84,6 +83,7 @@ body {
     z-index: 99;
     height: 7%;
 }
+
 /* RESET */
 .socialMedias ul {
     list-style: none;
@@ -118,7 +118,6 @@ body {
     width: 110px;
     height: auto;
 }
-
 /* SUBMENÚ */
 .socialMedias .submenu {
     padding-top: 10px;
@@ -207,8 +206,7 @@ body {
     height: auto;
     width: 100%;
     margin: 0;
-    padding: 0;
-    
+    padding: 0;    
 }
 .mainWallpaper{
     position: relative;
@@ -221,13 +219,9 @@ body {
 .profileCenter {
     height: auto;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(200px, 3fr);
 }
-
 .profileCenter .photo {
-    background-color: rgba(255, 255, 255, 0);
-    width: 50%;
+    width: 20%;
     height: auto;
     position: absolute;
     top: 13%;
@@ -237,20 +231,22 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-
 .presentationText {
+    background-color: rgba(255, 255, 255, 0.438);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 5%;
     text-align: center;
     background-color: rb(125, 137, 168);
-    width: 100%;
-    font-size: 16px;
+    width: 120%;
+    font-size: 90%;
     letter-spacing: 4px;
     font-family: Quicksand, sans-serif;
 }
+
     .profilePicture {
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding: 10%;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -258,9 +254,10 @@ body {
     height: 100%;
     border-bottom:  1px solid black;
 }
+
     .profilePicture img {
-    width: 100px;
-    height: 100px;
+    width: 50%;
+    height: 50%;
     border-radius: 60%;
     display: block;
     box-shadow: 
@@ -278,17 +275,22 @@ body {
     justify-content: center ;
     flex-wrap: wrap;
 }
-.atajos .option1 {
-    right: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: right;
+.box .option1 {
+    background-color: rgba(170, 0, 0, 0.514);
+    z-index: 99;
+    position: absolute;
+    top: 10px;
+    right: 10px;
     cursor: pointer;
-    width: auto;
-    padding: 0 20px;
-    border-radius: 60px 60px;
-    height: 40px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 60px;
+    color: rgb(12, 12, 12);
 }
+
 .atajos .option { 
   cursor: pointer;
   font-family: Quicksand, sans-serif; 
@@ -303,19 +305,15 @@ body {
   user-select: none;
   font-size: 20px; 
   border-radius: 60px; 
-
-  background-color: rgba(241, 195, 242, 0.326); 
+  background-color: rgba(241, 195, 242, 0.623); 
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15); 
-
   transition:
     background-color 0.3s ease,
     box-shadow 0.3s ease,
     transform 0.15s ease,
     color 0.2s ease;
 }
-.atajos .option1  {
-   cursor: pointer;
-}
+
 .atajos input  {
   display: none;
 }
@@ -332,7 +330,7 @@ body {
 #btn1:checked ~ label[for="btn1"],
 #btn2:checked ~ label[for="btn2"],
 #btn3:checked ~ label[for="btn3"] {
-  background-color: rgba(0, 0, 0, 0.342);
+  background-color: rgba(0, 0, 0, 0.678);
   color: white;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.353);
 }
@@ -343,18 +341,6 @@ body {
   background-color: rgb(49, 33, 53);
   transform: translateY(0);
 }
-@keyframes clickFlash {
-  0% {
-    opacity: 1;
-    transform: scale(0.97);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
-}
-
-
 /*Contenedores tiene los box invisibles, 
 de necesitarlo puedo aniadir mas boxes, osea
 cotenedores*/
@@ -363,8 +349,9 @@ cotenedores*/
     width: 100%;
     height: 100%;
     position: relative;
-    top: 60px;
+    top: 15px;
 }
+
 /*Estos son los contenedores invisibles*/
 .box {
     inset: 0;
@@ -381,11 +368,50 @@ cotenedores*/
     box-shadow:
         0 2px 4px rgba(0,0,0,0.12),
         0 6px 12px rgba(0,0,0,0.08);
-
     transition:
         opacity 0.35s cubic-bezier(0.4, 0.0, 0.2, 1),
         transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1),
         box-shadow 0.35s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+@media (max-width: 800px) {
+    .searcher{
+        background-color: re;
+        height: 20px;
+    }
+    .socialMedias {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+    .socialMedias .trigger img {
+        width: 80px;
+    }
+    .profileCenter .photo {
+    top: 30%;
+    width: 15%;
+}
+    .presentationText {
+    letter-spacing: 1px;
+    font-size: 60%;
+    }
+    .profilePicture img {
+        width: 90%;
+    }
+    .atajos {
+        top: 100%;
+    }
+    .atajos .option1 {
+        top: -50px;
+        width: 20px;
+    }
+    .atajos .option {
+        font-size: 80%;
+    }
+    .box {
+        transition:
+        opacity 0.25s ease,
+        transform 0.3s ease;
+        will-change: transform, opacity;
+    }
 }
 /*Cotenedor n1, Tabla de precios*/
 .contenedores .box-a {
@@ -402,20 +428,7 @@ cotenedores*/
 
 /*Optio1 es el boton para volver desaparecer el contenedor box-a*/
 
-.box .option1 {
-    z-index: 99;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 10px;
-    border-radius: 60px;
-    color: rgb(12, 12, 12);
-}
+
 .box .option1:hover {
     background-color: rgba(0, 0, 0, 0.575);
     color: white;
@@ -856,124 +869,126 @@ el color escogido se mantenga*/
 
 /* 
 Modelado responsive */
-@media (max-width: 800px){
-    .searcher { 
-    display: none;
-     height: 35px; 
-    }
-    .searcher .busqueda  {
-        width: 100%;
+    /* @media (max-width: 800px){
+        .searcher { 
         display: none;
-    }
-    .presentationText {
-    font-size: 100%;
-    letter-spacing: 1px;
-    }
-    .profilePicture {
-    width: 80px;
-    height: 80px;
-}
-    .profilePicture img {
-    width: 80%;
-    height: 80%;
-    }
-    .Cuadro {
-        position: absolute;
-        bottom: -20px;
-        font-size: 10px;
-    }
-    .mainWallpaper{
-    top: 90px;
-    }
-    .atajos {
-            top: 105%;
+        height: 35px; 
+        }
+        .searcher .busqueda  {
             width: 100%;
-            height: auto;
+            display: none;
+        }
+        .presentationText {
+        font-size: 100%;
+        letter-spacing: 1px;
+        }
+        .profilePicture {
+        width: 80px;
+        height: 80px;
     }
-    .atajos .option {
-    font-size: 80%;
-    padding: 0 5px;
-    height: 40px;
+        .profilePicture img {
+        width: 80%;
+        height: 80%;
+        }
+        .Cuadro {
+            position: absolute;
+            bottom: -20px;
+            font-size: 10px;
+        }
+        .mainWallpaper{
+        top: 90px;
+        }
+        .atajos {
+                top: 105%;
+                width: 100%;
+                height: auto;
+        }
+        .atajos .option {
+        font-size: 80%;
+        padding: 0 5px;
+        height: 40px;
+        }
+        .layout {
+            height: 300px;
+        }
+        .imagenes {
+        background-color: rgb(211, 171, 171);
+        padding: 0px;
+        margin: 0px;
+        width: 70%;
     }
-    .layout {
-        height: 300px;
-    }
-    .imagenes {
-    background-color: rgb(112, 36, 36);
-    padding: 0px;
-    margin: 0px;
-    width: 70%;
-}
 
-    .box .pricesDetails {
-    padding-top: 4px;
-    width: 100%;
-    height: auto;
-    background-color: rgb(103, 240, 160);
-    
-}
-    .pricesDetails button {
-        font-size: 10px;
+        .box .pricesDetails {
+        padding-top: 4px;
+        width: 100%;
+        height: auto;
+        background-color: rgb(103, 240, 160);
+        
     }
-.grupo {
-    width: 25%;
-    overflow:visible;
-    margin: 0px;
-    padding: 0px;
-    height: 95%;
-}
-.grupo img {
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    transition:
-    transform 0.35s cubic-bezier(0.4, 0.0, 0.2, 1),
-    box-shadow 0.35s ease;
-}
-.cuerpoPrecios{
-    margin: 0px;
-    padding: 0px;
-    height: auto;
-    display: block;
-}
-.cuerpoVersiones {
-    width: 100%;
-    background-color: rgb(122, 122, 177);
-}
-.box .option1 {
-    font-size: 12px;
-    z-index: 99;
-    width: 10px;
-    height: 20px;
-    background-color: rgba(199, 0, 0, 0.589);
-    top: 0px;
-    right: -1px;
-    border-radius: 90%;
-    color: beige;
-}
-.box .personaje .termycond2 {
-    justify-content: left;
-    height: 4%;
-    font-size: 12px;
-    margin: 0;
-    padding: 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-.precios {
-    background-color: red;
-    width: 100%;
-    
-}
-.botonTermsyCond {
-    height: auto;
-    margin: 0;
-    width: 300px;
-    padding: 0px;
-    font-size: 12px;
-}
+        .pricesDetails button {
+            font-size: 10px;
+        }
+    .grupo {
+        overflow: hidden;
+        min-width: 25%;
+        overflow:visible;
+        margin: 0px;
+        padding: 0px;
+        height: 95%;
+        gap: 5%;
+    }
+    .grupo img {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        transition:
+        transform 0.35s cubic-bezier(0.4, 0.0, 0.2, 1),
+        box-shadow 0.35s ease;
+    }
+    .cuerpoPrecios{
+        margin: 0px;
+        padding: 0px;
+        height: auto;
+        display: block;
+    }
+    .cuerpoVersiones {
+        width: 100%;
+        background-color: rgb(122, 122, 177);
+    }
+    .box .option1 {
+        font-size: 12px;
+        z-index: 99;
+        width: 10px;
+        height: 20px;
+        background-color: rgba(199, 0, 0, 0.589);
+        top: 0px;
+        right: -1px;
+        border-radius: 90%;
+        color: beige;
+    }
+    .box .personaje .termycond2 {
+        justify-content: left;
+        height: 4%;
+        font-size: 12px;
+        margin: 0;
+        padding: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .precios {
+        background-color: red;
+        width: 100%;
+        
+    }
+    .botonTermsyCond {
+        height: auto;
+        margin: 0;
+        width: 300px;
+        padding: 0px;
+        font-size: 12px;
+    }
 
 
-}
+    } */

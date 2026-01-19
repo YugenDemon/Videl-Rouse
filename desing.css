@@ -402,7 +402,6 @@ cotenedores*/
 
 /*Optio1 es el boton para volver desaparecer el contenedor box-a*/
 
-
 .box .option1:hover {
     background-color: rgba(0, 0, 0, 0.575);
     color: white;
@@ -528,7 +527,6 @@ el color escogido se mantenga*/
     pointer-events: auto;
     display: flex;
 }
-
 @keyframes slideFadeIn {
   from {
     opacity: 0;
@@ -571,7 +569,6 @@ el color escogido se mantenga*/
 .grupo.activo img:nth-child(3) { animation-delay: 0.4s; }
 .grupo.activo img:nth-child(4) { animation-delay: 0.55s; }
 
-
 .box .personaje .cuerpoVersiones .precios {
     padding: 5px;
     margin-left: 5px;
@@ -586,7 +583,6 @@ el color escogido se mantenga*/
         transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1),
         box-shadow 0.35s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
-
 .precio {
     object-fit: cover;
     width: 100%;
@@ -602,7 +598,6 @@ el color escogido se mantenga*/
   transform: translateY(0);
 }
 .pricesDetails {
-
     background-color: gren;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 80px));
@@ -627,7 +622,6 @@ el color escogido se mantenga*/
         transform 0.12s ease,
         color 0.15s ease;
 }
-
 .pricesDetails button:hover {
     background-color: black;
     color: white;
@@ -660,14 +654,14 @@ el color escogido se mantenga*/
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 30%;
     height: 20px;
     color: white;
     background-color: rgb(0, 0, 0);
 }
-
 .box .personaje .termycond2 p{
     width: 100%;
+    padding-left: 10px ;
 }
 .botonTermsyCond {
     margin: 0px;
@@ -687,76 +681,8 @@ el color escogido se mantenga*/
     width: 300px;
     height: 10px;
 }
-@media (max-width: 700px) {
-    .searcher{
-        height: 20px;
-    }
-    .socialMedias {
-        font-size: 10px;
-        letter-spacing: 2px;
-    }
-    .socialMedias .trigger img {
-        width: 80px;
-    }
-    .profileCenter .photo {
-    top: 30%;
-    width: 15%;
-    }
-    .presentationText {
-    letter-spacing: 1px;
-    font-size: 60%;
-    }
-    .profilePicture img {
-        width: 90%;
-    }
-    .atajos {
-        top: 100%;
-    }
-    .atajos .option1 {
-        top: -50px;
-        width: 20px;
-    }
-    .atajos .option {
-        font-size: 80%;
-    }
-    .box {
-        transition:
-        opacity 0.15s ease,
-        transform 0.15s ease;
-        will-change: transform, opacity;
-    }
-    .tablaPrecios {
-        background-color: rgb(67, 19, 73);
-        height: 300px;
-    }
-    .cuerpoPrecios {
-        background-color: red;
-        height: 100%;
-        display: block;
-    }
-
-    .pricesDetails {
-        padding-top: 10px;
-        background-color: rgb(0, 230, 199);
-        grid-template-columns: repeat(auto-fit, minmax(0, 70px));
-        font-size: 90%;
-        height: 25%;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-    }
-    .termycond2 {
-        width: 100%;
-        position: absolute;
-        top: 310px;
-        font-size: 80%;
-        display: none;
-        padding: 0px;
-        background-color: rgb(47, 60, 66);
-    }
-}
 .botonTermsyCond:hover {
-    background-color: rgb(167, 58, 58);
+    background-color: rgb(123, 58, 167);
     color: white;
     transform: translateX(5px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.18);
@@ -796,10 +722,87 @@ el color escogido se mantenga*/
     0 12px 24px rgba(0,0,0,0.12);
   transition-delay: 0.05s;
 }
-
-
-
-
+@media (max-width: 700px) {
+    .searcher{
+        height: 20px;
+    }
+    .socialMedias {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+    .socialMedias .trigger img {
+        width: 80px;
+    }
+    .profileCenter .photo {
+    top: 30%;
+    width: 15%;
+    }
+    .presentationText {
+    letter-spacing: 1px;
+    font-size: 60%;
+    }
+    .profilePicture img {
+        width: 90%;
+    }
+    .atajos {
+        top: 100%;
+    }
+    .atajos .option1 {
+        top: -50px;
+        right: 5px;
+        width: 10px;
+        height: 20px;
+    }
+    .atajos .option {
+        font-size: 80%;
+    }
+    .box {
+        transition:
+        opacity 0.15s ease,
+        transform 0.15s ease;
+        will-change: transform, opacity;
+    }
+    .tablaPrecios {
+        background-color: rgb(67, 19, 73);
+        height: 300px;
+    }
+    .cuerpoPrecios {
+        background-color: red;
+        height: 100%;
+        display: block;
+    }
+    .box .personaje .cuerpoVersiones .precios {
+        width: 25%;
+    }
+    .precio {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 100%;
+        height: 100%;
+    }
+    .pricesDetails {
+        padding-bottom: 10px;
+        padding-top: 23px;
+        background-color: rgb(0, 145, 125);
+        grid-template-columns: repeat(auto-fit, minmax(0, 70px));
+        font-size: 90%;
+        height: 25%;
+        width: 100%;
+    }
+    .pricesDetails button {
+        min-width: 25% ;
+        padding: 4px;
+        margin: 2px;
+    }
+    .box .personaje .termycond2 {
+        position: absolute;
+        top: 267px;
+        width: 60%;
+        font-size: 70%;
+        padding: 0px;
+        background-color: rgb(47, 60, 66);
+    }
+}
 .secondWallpaper{
     background-color: black;
     height: px;

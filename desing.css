@@ -655,17 +655,22 @@ el color escogido se mantenga*/
   background: #000000;
 }
 .box .personaje .termycond2 {
+    padding-top: 4px;
+    padding-bottom: 4px;
     display: flex;
-    width: 35%;
-    height: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20px;
     color: white;
-    background-color: wheat;
+    background-color: rgb(0, 0, 0);
 }
 
 .box .personaje .termycond2 p{
     width: 100%;
 }
 .botonTermsyCond {
+    margin: 0px;
     transition:
     background-color 0.3s ease,
     box-shadow 0.3s ease,
@@ -684,7 +689,6 @@ el color escogido se mantenga*/
 }
 @media (max-width: 700px) {
     .searcher{
-        background-color: re;
         height: 20px;
     }
     .socialMedias {
@@ -723,7 +727,7 @@ el color escogido se mantenga*/
     }
     .tablaPrecios {
         background-color: rgb(67, 19, 73);
-        height: 320px;
+        height: 300px;
     }
     .cuerpoPrecios {
         background-color: red;
@@ -740,7 +744,6 @@ el color escogido se mantenga*/
         width: 100%;
         align-items: center;
         justify-content: center;
-
     }
     .termycond2 {
         width: 100%;
@@ -749,7 +752,6 @@ el color escogido se mantenga*/
         font-size: 80%;
         display: none;
         padding: 0px;
-        height: 5px;
         background-color: rgb(47, 60, 66);
     }
 }
@@ -767,16 +769,6 @@ el color escogido se mantenga*/
     width: 100%;
     height: auto;
 }
-
-
-
-
-
-
-
-
-
-
 /* .box .personaje .cuerpoVersiones .fullBody-boceto,
 .box .personaje .cuerpoVersiones .fullBody-lineArt,
 .box .personaje .cuerpoVersiones .fullBody-FullHd {
@@ -907,129 +899,3 @@ el color escogido se mantenga*/
     background-color: rgb(206, 177, 177);
     color: rgb(0, 0, 0);
 }
-
-/* 
-Modelado responsive */
-    /* @media (max-width: 800px){
-        .searcher { 
-        display: none;
-        height: 35px; 
-        }
-        .searcher .busqueda  {
-            width: 100%;
-            display: none;
-        }
-        .presentationText {
-        font-size: 100%;
-        letter-spacing: 1px;
-        }
-        .profilePicture {
-        width: 80px;
-        height: 80px;
-    }
-        .profilePicture img {
-        width: 80%;
-        height: 80%;
-        }
-        .Cuadro {
-            position: absolute;
-            bottom: -20px;
-            font-size: 10px;
-        }
-        .mainWallpaper{
-        top: 90px;
-        }
-        .atajos {
-                top: 105%;
-                width: 100%;
-                height: auto;
-        }
-        .atajos .option {
-        font-size: 80%;
-        padding: 0 5px;
-        height: 40px;
-        }
-        .layout {
-            height: 300px;
-        }
-        .imagenes {
-        background-color: rgb(211, 171, 171);
-        padding: 0px;
-        margin: 0px;
-        width: 70%;
-    }
-
-        .box .pricesDetails {
-        padding-top: 4px;
-        width: 100%;
-        height: auto;
-        background-color: rgb(103, 240, 160);
-        
-    }
-        .pricesDetails button {
-            font-size: 10px;
-        }
-    .grupo {
-        overflow: hidden;
-        min-width: 25%;
-        overflow:visible;
-        margin: 0px;
-        padding: 0px;
-        height: 95%;
-        gap: 5%;
-    }
-    .grupo img {
-        padding: 0px;
-        margin: 0px;
-        width: 100%;
-        height: 100%;
-        border-radius: 16px;
-        transition:
-        transform 0.35s cubic-bezier(0.4, 0.0, 0.2, 1),
-        box-shadow 0.35s ease;
-    }
-    .cuerpoPrecios{
-        margin: 0px;
-        padding: 0px;
-        height: auto;
-        display: block;
-    }
-    .cuerpoVersiones {
-        width: 100%;
-        background-color: rgb(122, 122, 177);
-    }
-    .box .option1 {
-        font-size: 12px;
-        z-index: 99;
-        width: 10px;
-        height: 20px;
-        background-color: rgba(199, 0, 0, 0.589);
-        top: 0px;
-        right: -1px;
-        border-radius: 90%;
-        color: beige;
-    }
-    .box .personaje .termycond2 {
-        justify-content: left;
-        height: 4%;
-        font-size: 12px;
-        margin: 0;
-        padding: 0px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    .precios {
-        background-color: red;
-        width: 100%;
-        
-    }
-    .botonTermsyCond {
-        height: auto;
-        margin: 0;
-        width: 300px;
-        padding: 0px;
-        font-size: 12px;
-    }
-
-
-    } */

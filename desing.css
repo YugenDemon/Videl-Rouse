@@ -764,7 +764,7 @@ el color escogido se mantenga*/
     }
     .tablaPrecios {
         background-color: rgb(67, 19, 73);
-        height: 300px;
+        height: 280px;
     }
     .cuerpoPrecios {
         background-color: red;
@@ -772,17 +772,20 @@ el color escogido se mantenga*/
         display: block;
     }
     .box .personaje .cuerpoVersiones .precios {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
         width: 25%;
     }
-    .precio {
-        padding-top: 8px;
-        padding-bottom: 8px;
-        width: 100%;
+    .box .personaje .cuerpoVersiones  .precio {
+        padding: 0px;
+        width: 80%;
         height: 100%;
     }
     .pricesDetails {
         padding-bottom: 10px;
-        padding-top: 23px;
+        padding-top: 25px;
         background-color: rgb(0, 145, 125);
         grid-template-columns: repeat(auto-fit, minmax(0, 70px));
         font-size: 90%;
@@ -796,12 +799,13 @@ el color escogido se mantenga*/
     }
     .box .personaje .termycond2 {
         position: absolute;
-        top: 267px;
+        top: 250px;
         width: 60%;
         font-size: 70%;
         padding: 0px;
         background-color: rgb(47, 60, 66);
     }
+
 }
 .secondWallpaper{
     background-color: black;

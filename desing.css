@@ -795,7 +795,6 @@ el color escogido se mantenga*/
         width: 100%;
     }
     .pricesDetails button {
-        white-space: nowrap;
         font-size: 75%;
         min-width: 25% ;
         margin: 2px;

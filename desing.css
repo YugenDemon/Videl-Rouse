@@ -787,12 +787,11 @@ el color escogido se mantenga*/
         height: 100%;
     }
     .pricesDetails {
-        padding-bottom: 4.5%;
+        padding-bottom: 1.5%;
         padding-top: 30px;
         background-color: rgb(0, 145, 125);
         grid-template-columns: repeat(auto-fit, minmax(0, 70px));
-        height: 25%;
-        max-height: auto;
+        height: auto;
         width: 100%;
     }
     .pricesDetails button {

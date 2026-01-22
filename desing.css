@@ -1,4 +1,5 @@
 body {
+    font-family: quicksand, sans-serif;
     position: relative;
     margin: 0;
     padding: 0;
@@ -570,10 +571,8 @@ el color escogido se mantenga*/
 .grupo.activo img:nth-child(4) { animation-delay: 0.55s; }
 
 .box .personaje .cuerpoVersiones .precios {
-    padding: 5px;
-    margin-left: 5px;
     width: 20%;
-    height: auto;
+    height: 100%;
     box-shadow:
         0 2px 4px rgba(0,0,0,0.12),
         0 6px 12px rgba(0,0,0,0.08);
@@ -584,7 +583,7 @@ el color escogido se mantenga*/
         box-shadow 0.35s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 .precio {
-    object-fit: cover;
+    padding: 0px;
     width: 100%;
     height:98%;
     display: none;
@@ -650,20 +649,63 @@ el color escogido se mantenga*/
 .pricesDetails button.activo {
   background: #000000;
 }
-.box .personaje .termycond2 {
+.termycond2 {
+    font-family: quicksand, sans-serif;
     padding-top: 4px;
     padding-bottom: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 100%;
     height: 20px;
     color: white;
     background-color: rgb(0, 0, 0);
 }
-.box .personaje .termycond2 p{
+.termycond2 .tm1 {
+    background-color: pink;
+    color: black;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.termycond2 .tm1 p{
+    
     width: 100%;
     padding-left: 10px ;
+}
+.termycond2 .tm2 {
+    gap: 3%;
+    background-color: rgb(144, 97, 252);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tm2 button {
+    background-color: white;
+    border-style: none;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 60px;
+    font-family: quicksand, sans-serif;
+    font-size: 100%;
+}
+.social {
+    padding-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    width: 50%;
+}
+.tm2 .social img {
+    background-color: white;
+    padding: 2px;
+    border-radius: 60px;
+    width: 50%;
+    height: 50%;
 }
 .botonTermsyCond {
     margin: 0px;
@@ -747,7 +789,7 @@ el color escogido se mantenga*/
         width: 90%;
     }
     .atajos {
-        top: 98%;
+        top: 80%;
     }
     .atajos .option1 {
         top: -50px;
@@ -766,7 +808,7 @@ el color escogido se mantenga*/
     }
     .tablaPrecios {
         background-color: rgb(67, 19, 73);
-        height: 260px;
+        height: 290px;
     }
     .cuerpoPrecios {
         background-color: red;
@@ -774,37 +816,35 @@ el color escogido se mantenga*/
         display: block;
     }
     .precios {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(0, 0, 0);
         width: 100%;
         height: 100%;
     }
-    .box .personaje .cuerpoVersiones  .precio {
-        padding: 0px;
-        width: 80%;
+    .precio {
+        width: 100%;
         height: 100%;
     }
     .pricesDetails {
+        gap: 2px;
         padding-bottom: 1.5%;
-        padding-top: 30px;
+        padding-top: 24px;
         background-color: rgb(0, 145, 125);
         grid-template-columns: repeat(auto-fit, minmax(0, 70px));
         height: auto;
         width: 100%;
     }
     .pricesDetails button {
-        font-size: 75%;
+        margin-bottom: 5px;
+        padding: 2px;
+        font-size: 60%;
         min-width: 25% ;
         margin: 2px;
-        height: 90%;
+        height: 80%;
     }
     .box .personaje .termycond2 {
         white-space: nowrap;
         position: absolute;
-        top: 233px;
-        width: 65%;
+        top: 257px;
+
         font-size: 70%;
         padding: 0px;
         padding-left: 10px;

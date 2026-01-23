@@ -670,6 +670,7 @@ el color escogido se mantenga*/
     justify-content: center;
     align-items: center;
 }
+
 .termycond2 .tm1 p{
     
     width: 100%;
@@ -706,65 +707,6 @@ el color escogido se mantenga*/
     border-radius: 60px;
     width: 50%;
     height: 50%;
-}
-.botonTermsyCond {
-    margin: 0px;
-    transition:
-    background-color 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.15s ease,
-    color 0.2s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    padding: 5px;
-    border-radius: 16px;
-    width: 300px;
-    height: 10px;
-}
-.botonTermsyCond:hover {
-    background-color: rgb(123, 58, 167);
-    color: white;
-    transform: translateX(5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
-    
-}
-/*Esto hace que lo invisible se vuelva visible*/
-/*Aqui empieza la box-b. Seccion Galeria.*/
-.contenedores .box-b {
-    opacity: 0;
-    width: 100%;
-    height: auto;
-}
-/* .box .personaje .cuerpoVersiones .fullBody-boceto,
-.box .personaje .cuerpoVersiones .fullBody-lineArt,
-.box .personaje .cuerpoVersiones .fullBody-FullHd {
-      opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-    box-shadow:
-        0 6px 10px rgba(0,0,0,0.16),
-        0 12px 24px rgba(0,0,0,0.12);
-    transition-delay: 0.05s;
-} */
-.box .personajes .versiones:checked {
-    background-color: rgb(49, 33, 53);
-    transform: translateY(0);
-}
-
-#btn1:checked ~ .contenedores .box-a,
-#btn2:checked ~ .contenedores .box-b,
-#btn3:checked ~ .contenedores .box-c {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  box-shadow:
-    0 6px 10px rgba(0,0,0,0.16),
-    0 12px 24px rgba(0,0,0,0.12);
-  transition-delay: 0.05s;
 }
 @media (max-width: 700px) {
     .searcher{
@@ -841,16 +783,94 @@ el color escogido se mantenga*/
         height: 80%;
     }
     .box .personaje .termycond2 {
+        width: 100%;
         white-space: nowrap;
         position: absolute;
         top: 257px;
-
         font-size: 70%;
         padding: 0px;
-        padding-left: 10px;
         background-color: rgb(0, 0, 0);
     }
+    .termycond2 .tm1 p {
+        padding-left: 3px;
+    }
+    .termycond2 .tm1 .botonTermsyCond {
+        padding: 3px;
+        width: 200px;
+        height: 8px;
+        font-size: 70%;
+    }
 }
+
+
+
+
+.botonTermsyCond {
+    margin: 0px;
+    transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.15s ease,
+    color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 16px;
+    width: 300px;
+    height: 10px;
+}
+.botonTermsyCond:hover {
+    background-color: rgb(123, 58, 167);
+    color: white;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    
+}
+/*Esto hace que lo invisible se vuelva visible*/
+/*Aqui empieza la box-b. Seccion Galeria.*/
+.contenedores .box-b {
+    opacity: 0;
+    width: 100%;
+    height: auto;
+}
+/* .box .personaje .cuerpoVersiones .fullBody-boceto,
+.box .personaje .cuerpoVersiones .fullBody-lineArt,
+.box .personaje .cuerpoVersiones .fullBody-FullHd {
+      opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    box-shadow:
+        0 6px 10px rgba(0,0,0,0.16),
+        0 12px 24px rgba(0,0,0,0.12);
+    transition-delay: 0.05s;
+} */
+.box .personajes .versiones:checked {
+    background-color: rgb(49, 33, 53);
+    transform: translateY(0);
+}
+
+#btn1:checked ~ .contenedores .box-a,
+#btn2:checked ~ .contenedores .box-b,
+#btn3:checked ~ .contenedores .box-c {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  box-shadow:
+    0 6px 10px rgba(0,0,0,0.16),
+    0 12px 24px rgba(0,0,0,0.12);
+  transition-delay: 0.05s;
+}
+
+
+
+
+
+
+
 .secondWallpaper{
     background-color: back;
     height: px;

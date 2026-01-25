@@ -541,7 +541,7 @@ el color escogido se mantenga*/
 .grupo img {
     width: 25%;
     height: 98%;
-    object-fit: covr;
+    object-fit: cover;
     border-radius: 20px;
     transition:
     transform 0.35s cubic-bezier(0.4, 0.0, 0.2, 1),

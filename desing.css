@@ -1,4 +1,5 @@
 body {
+    background-color: bla;
     font-family: quicksand, sans-serif;
     position: relative;
     margin: 0;
@@ -204,6 +205,7 @@ body {
 
 
 .Main {
+    
     height: auto;
     width: 100%;
     margin: 0;
@@ -379,30 +381,27 @@ cotenedores*/
     max-height: auto;
 }
 .tablaPrecios {
-    background-color: rgb(0, 102, 255);
     width: 100%;
     height: 600px;
 }
 .comic {
-    background-color: rgb(88, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     color: white;
+    display: none;
 }
 .animaciones {
     width: 100%;
     height: 100%;
-    background-color: pink;
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
-
 /*Optio1 es el boton para volver desaparecer el contenedor box-a*/
-
 .box .option1:hover {
     background-color: rgba(0, 0, 0, 0.575);
     color: white;
@@ -506,6 +505,7 @@ el color escogido se mantenga*/
         transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 .grupo {
+    margin-top: 7px;
     margin-left: 5px;
     gap: 2px;
     pointer-events: none;
@@ -522,7 +522,6 @@ el color escogido se mantenga*/
     transition: opacity 0.6s ease;
 }
 .grupo.activo {
-    background-color: green;
     position: relative;
     animation: slideFadeIn 0.3s ease forwards;
     pointer-events: auto;
@@ -571,6 +570,10 @@ el color escogido se mantenga*/
 .grupo.activo img:nth-child(4) { animation-delay: 0.55s; }
 
 .box .personaje .cuerpoVersiones .precios {
+    height: 95%;
+    margin-top: 10px;
+    padding-left: 5px;
+    overflow: hidden;
     width: 20%;
     height: 100%;
     box-shadow:
@@ -585,11 +588,12 @@ el color escogido se mantenga*/
 .precio {
     padding: 0px;
     width: 100%;
-    height:98%;
+    height: 100%;
     display: none;
     opacity: 0;
     transition: opacity 0.4s ease;
      border-radius: 20px;
+    
 }
 .precio.activo {
   display: block;
@@ -607,14 +611,14 @@ el color escogido se mantenga*/
 }
 .pricesDetails button {
     all: unset; /* elimina estilos por defecto del botón */
-    height: 90%;
+    height: 50%;
     font-size: 75%;
     display: inline-grid;
     place-items: center;
     line-height: 1; /* evita altura extra */
     color: black;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.527);
+    background-color: rgb(255, 255, 255);
     border-radius: 999px; /* pill perfecto */
     text-align: center;
     transition:
@@ -650,6 +654,7 @@ el color escogido se mantenga*/
   background: #000000;
 }
 .termycond2 {
+    gap: 1%;
     font-family: quicksand, sans-serif;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -659,54 +664,31 @@ el color escogido se mantenga*/
     width: 100%;
     height: 20px;
     color: white;
-    background-color: rgb(0, 0, 0);
+    background-color: gb(0, 0, 0);
 }
 .termycond2 .tm1 {
-    background-color: pink;
-    color: black;
-    width: 50%;
+    gap: 2%;
+    color: rgb(255, 255, 255);
+    width: 30%;
+    white-space: nowrap;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .termycond2 .tm1 p{
-    
     width: 100%;
     padding-left: 10px ;
 }
 .termycond2 .tm2 {
+    padding-left: 10px;
+    white-space: nowrap;
     gap: 3%;
-    background-color: rgb(144, 97, 252);
-    width: 50%;
+    width: 70%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.tm2 button {
-    background-color: white;
-    border-style: none;
-    padding-left: 4px;
-    padding-right: 4px;
-    border-radius: 60px;
-    font-family: quicksand, sans-serif;
-    font-size: 100%;
-}
-.social {
-    padding-right: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;;
-    width: 50%;
-}
-.tm2 .social img {
-    background-color: white;
-    padding: 2px;
-    border-radius: 60px;
-    width: 50%;
-    height: 50%;
 }
 @media (max-width: 700px) {
     .searcher{
@@ -749,11 +731,9 @@ el color escogido se mantenga*/
         will-change: transform, opacity;
     }
     .tablaPrecios {
-        background-color: rgb(67, 19, 73);
         height: 290px;
     }
     .cuerpoPrecios {
-        background-color: red;
         height: 100%;
         display: block;
     }
@@ -769,7 +749,6 @@ el color escogido se mantenga*/
         gap: 2px;
         padding-bottom: 1.5%;
         padding-top: 24px;
-        background-color: rgb(0, 145, 125);
         grid-template-columns: repeat(auto-fit, minmax(0, 70px));
         height: auto;
         width: 100%;
@@ -789,22 +768,68 @@ el color escogido se mantenga*/
         top: 257px;
         font-size: 70%;
         padding: 0px;
-        background-color: rgb(0, 0, 0);
     }
-    .termycond2 .tm1 p {
-        padding-left: 3px;
+    .box .personaje .termycond2 .tm1 {
+        font-size: 80%;
+        width: 40%;
+        padding: 0px;
+        margin: 0px;
     }
-    .termycond2 .tm1 .botonTermsyCond {
-        padding: 3px;
-        width: 200px;
-        height: 8px;
-        font-size: 70%;
+    .box .personaje .termycond2 .tm1 .botonTermsyCond {
+        padding: 5px;
+        font-size: 100%;
+        height: 30%;
     }
+    .box .personaje .termycond2 .tm2 {
+        width: 60%;
+        font-size: 80%;
+    }
+    .box .personaje .termycond2 .tm2 .social {
+        gap: 3%;
+    }
+    .box .personaje .termycond2 .tm2 .social img {
+        width: 11%;
 }
-
-
-
-
+}
+.botonPayment {
+    border-left: 1px solid black;
+    gap: 5%;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tm2 .botonPayment button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    border-radius: 60px;
+    font-family: quicksand, sans-serif;
+    font-size: 100%;
+    gap: 5%;
+}
+.tm2 .botonPayment  img {
+    width: 8%;
+}
+.social {
+    border-right: 2px solid black;
+    gap: 5%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.tm2 .social img {
+    background-color: rgb(255, 255, 255);
+    padding: 2px;
+    border-radius: 60px;
+    width: 8%;
+    height: 50%;
+}
 .botonTermsyCond {
     margin: 0px;
     transition:
@@ -824,7 +849,6 @@ el color escogido se mantenga*/
     height: 10px;
 }
 .botonTermsyCond:hover {
-    background-color: rgb(123, 58, 167);
     color: white;
     transform: translateX(5px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.18);
@@ -873,12 +897,13 @@ el color escogido se mantenga*/
 
 .secondWallpaper{
     background-color: back;
-    height: px;
     width: 100%;
+    display: none;
 }
 .thirdWallpaper{
     background-color: blak;
     width: 100%;
+    display: none;
 }
 
 
@@ -941,7 +966,7 @@ el color escogido se mantenga*/
   transition: background .3s;
 }
 
-.modalImagen .prev { left: 5%; }
+.modalImagen .prev { left: 3%; }
 .modalImagen .next { right: 5%; }
 
 .modalImagen .cerrar {
@@ -952,10 +977,10 @@ el color escogido se mantenga*/
     width: 40px;
     height: 40px;
     border-radius: 60px;
-    background-color: rgb(143, 0, 0);
+    background-color: rgb(155, 52, 52);
     position: absolute;
-    top: 40px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     font-size: 20px;
     color: rgb(255, 255, 255);
     cursor: pointer;
